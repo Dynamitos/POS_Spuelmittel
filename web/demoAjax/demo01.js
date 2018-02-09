@@ -9,9 +9,12 @@ function startRequest() {
 
 //Callback function
 function handleStateChange() {
-    if(xmlHttp.readyState === 4) {
-        if(xmlHttp.status === 200) {
-            alert("Antwort vom Server: " + xmlHttp.responseText);
+    if (xmlHttp.readyState === 4) {
+        if (xmlHttp.status === 200) {
+            //alert("Antwort vom Server: " + xmlHttp.responseText);
+            //HTML-Binding mit id-innerHtml
+            document.getElementById("response").innerHTML =
+                    "Antwort vom Server: " + xmlHttp.responseText;
         }
     }
 }
